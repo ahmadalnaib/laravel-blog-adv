@@ -136,6 +136,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -152,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604652160314</updated>
-      <workItem from="1604652168041" duration="4376000" />
+      <workItem from="1604652168041" duration="7959000" />
     </task>
     <servers />
   </component>
@@ -180,5 +181,9 @@
       <screen x="1920" y="148" width="1366" height="768" />
     </state>
     <state width="1323" height="185" key="GridCell.Tab.0.right/1920.148.1366.768/0.0.1280.720@1920.148.1366.768" timestamp="1604652598853" />
+    <state x="2104" y="177" key="SettingsEditor" timestamp="1604658873236">
+      <screen x="1920" y="148" width="1366" height="768" />
+    </state>
+    <state x="2104" y="177" key="SettingsEditor/1920.148.1366.768/0.0.1280.720@1920.148.1366.768" timestamp="1604658873236" />
   </component>
 </project>
