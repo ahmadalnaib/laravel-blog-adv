@@ -36,6 +36,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
 //category
     Route::get('/category/index',[CategoriesController::class,'index'])->name('category.index');
     Route::get('/category/create',[CategoriesController::class,'create'])->name('category.create');
+    Route::get('/category/edit/{id}',[CategoriesController::class,'edit'])->name('category.edit');
     Route::post('/category/store',[CategoriesController::class,'store'])->name('category.store');
+    Route::get('/category/delete/{id}',[CategoriesController::class,'destroy'])->name('category.delete');
+    Route::put('/category/update/{id}',[CategoriesController::class,'update'])->name('category.update');
 
 });

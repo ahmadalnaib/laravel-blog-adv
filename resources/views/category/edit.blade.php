@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 
@@ -16,11 +17,12 @@
             @endforeach
         @endif
 
-        <form method="post"  action="{{route('category.store')}}" >
+        <form method="post"  action="{{route('category.update',$category->id)}}" >
             @csrf
+            @method('PUT')
             <div class="form-group">
                 <label for="Name">Name</label>
-                <input type="text" name="name" class="form-control" id="name" >
+                <input type="text" name="name" class="form-control" id="name" value="{{$category->name}}">
             </div>
 
 

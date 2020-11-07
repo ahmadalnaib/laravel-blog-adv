@@ -47,7 +47,8 @@ class CategoriesController extends Controller
           'name'=>request('name'),
        ]);
 
-       return  redirect()->route('category.index');
+        $request->session()->flash('msg', 'Category created');
+        return redirect()->route('category.index');
 
     }
 
@@ -71,7 +72,13 @@ class CategoriesController extends Controller
     public function edit($id)
     {
         //
+        $category=Category::findOrFail($id);
+        return view('category.edit',compact('category'));
+
+
+
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -82,7 +89,17 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category=Category::findOrFail($id);
+
+        $request->validate([
+           'name'=>'required',
+        ]);
+        $category->update([
+           $category->name= request('name') ,
+            $category->save()
+        ]);
+        $request->session()->flash('msg', 'Task was successful!');
+        return redirect()->route('category.index');
     }
 
     /**
@@ -94,5 +111,9 @@ class CategoriesController extends Controller
     public function destroy($id)
     {
         //
+        $category=Category::findOrFail($id);
+        $category->delete();
+        return redirect()->back()->with('msg','Category deleted');
     }
+
 }
