@@ -35,7 +35,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            "title"=>'required',
+            "content"=>'required',
+            "photo"=>"required|image"
+        ]);
+
     }
 
     /**

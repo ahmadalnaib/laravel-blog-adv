@@ -26,7 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //out route
 
 
-//Route::group(['prefix'=>'admin'],function (){
+Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
     Route::get('/post/create',[PostsController::class,'create'])->name('posts.create');
-    Route::get('/post/store',[PostsController::class,'store'])->name('posts.store');
-//});
+    Route::post('/post/store',[PostsController::class,'store'])->name('posts.store');
+});

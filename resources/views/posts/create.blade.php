@@ -3,8 +3,14 @@
 
 @section('content')
     <div class="container">
+{{--        show errors--}}
+        @if(count($errors)>0)
+            @foreach($errors->all() as $error)
+                <div class="alert alert-danger">{{$error}}</div>
+            @endforeach
+            @endif
 
-        <form method="post"  action="{{route('posts.store')}}>
+        <form method="post"  action="{{route('posts.store')}}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="title">Title</label>
@@ -14,12 +20,12 @@
                 <label for="content">Content</label>
                 <textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
             </div>
-            <form>
+
                 <div class="form-group">
                     <label for="photo">Upload photo</label>
                     <input type="file" class="form-control-file" id="photo" name="photo">
                 </div>
-            </form>
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
