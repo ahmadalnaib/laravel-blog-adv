@@ -15,6 +15,8 @@ class CategoriesController extends Controller
     public function index()
     {
         //
+        $categorises=Category::all();
+        return view('category.index',compact('categorises'));
     }
 
     /**
@@ -45,7 +47,7 @@ class CategoriesController extends Controller
           'name'=>request('name'),
        ]);
 
-       return  redirect()->back();
+       return  redirect()->route('category.index');
 
     }
 

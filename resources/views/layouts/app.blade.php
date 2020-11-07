@@ -64,6 +64,9 @@
                                     <a class="dropdown-item" href="{{ route('category.create') }}">
                                         {{ __('Create Category') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('category.index') }}">
+                                        {{ __(' Categories') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

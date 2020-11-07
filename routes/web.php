@@ -34,6 +34,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
 
 
 //category
+    Route::get('/category/index',[CategoriesController::class,'index'])->name('category.index');
     Route::get('/category/create',[CategoriesController::class,'create'])->name('category.create');
     Route::post('/category/store',[CategoriesController::class,'store'])->name('category.store');
 
