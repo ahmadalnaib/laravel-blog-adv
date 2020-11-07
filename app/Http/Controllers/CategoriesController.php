@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class CategoriesController extends Controller
 {
@@ -39,6 +40,13 @@ class CategoriesController extends Controller
         $request->validate([
            'name'=>'required',
         ]);
+
+       Category::create([
+          'name'=>request('name'),
+       ]);
+
+       return  redirect()->back();
+
     }
 
     /**
