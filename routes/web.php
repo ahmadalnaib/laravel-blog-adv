@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
+//    posts
     Route::get('/post/create',[PostsController::class,'create'])->name('posts.create');
     Route::post('/post/store',[PostsController::class,'store'])->name('posts.store');
+
+
+//category
+    Route::get('/category/create',[CategoriesController::class,'create'])->name('category.create');
+    Route::post('/category/store',[CategoriesController::class,'store'])->name('category.store');
+
 });
