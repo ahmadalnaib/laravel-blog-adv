@@ -31,11 +31,14 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
 //    posts
     Route::get('/posts',[PostsController::class,'index'])->name('posts.index');
     Route::get('/post/create',[PostsController::class,'create'])->name('posts.create');
+    Route::get('/post/edit/{id}',[PostsController::class,'edit'])->name('posts.edit');
     Route::post('/post/store',[PostsController::class,'store'])->name('posts.store');
+    Route::get('/post/delete/{id}',[PostsController::class,'destroy'])->name('posts.delete');
+    Route::put('/post/update/{id}',[PostsController::class,'update'])->name('posts.update');
 
 
 //category
-    Route::get('/category/index',[CategoriesController::class,'index'])->name('category.index');
+    Route::get('/category',[CategoriesController::class,'index'])->name('category.index');
     Route::get('/category/create',[CategoriesController::class,'create'])->name('category.create');
     Route::get('/category/edit/{id}',[CategoriesController::class,'edit'])->name('category.edit');
     Route::post('/category/store',[CategoriesController::class,'store'])->name('category.store');

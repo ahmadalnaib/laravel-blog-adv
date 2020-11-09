@@ -87,7 +87,8 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post=Post::findOrFail($id);
+        return view('posts.edit',compact('post'));
     }
 
     /**
@@ -99,7 +100,23 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post=Post::findOrFail($id);
+
+        $request->validate([
+            "title"=>'required',
+            "content"=>'required',
+            'category_id'=>'required',
+            "photo"=>"required|image"
+        ]);
+        $post->update([
+            $post->title= request('title') ,
+            $post->content= request('content') ,
+            $post->photo= request('photo') ,
+            $post->title= request('title') ,
+            $post->save()
+        ]);
+        $request->session()->flash('msg', 'Task was successful!');
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -111,5 +128,8 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+        $post=Post::findOrFail($id);
+        $post->delete();
+        return redirect()->back()->with('msg','Category deleted');
     }
 }
