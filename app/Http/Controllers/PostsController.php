@@ -45,6 +45,18 @@ class PostsController extends Controller
             "photo"=>"required|image"
         ]);
 
+        $photo=request('photo');
+        $photo_new_name=time().$photo->getClientOriginalName();
+        $photo->move('uploads/posts',$photo_new_name);
+
+        $post=Post::create([
+            "title"=>request('title'),
+            "content"=>request('content'),
+            'category_id'=>request('category_id'),
+            "photo"=>"uploads/posts".$photo_new_name
+
+        ]);
+
     }
 
     /**
