@@ -53,11 +53,15 @@ class PostsController extends Controller
             "title"=>request('title'),
             "content"=>request('content'),
             'category_id'=>request('category_id'),
-            "photo"=>"uploads/posts".$photo_new_name
+            "photo"=>"uploads/posts".$photo_new_name,
+            'slug'=>str_slug($request->title),
+
+//            when we need use slug use helpers
+//        composer require laravel/helpers
 
         ]);
 
-        $request->session()->flash('msg', 'Category created');
+        $request->session()->flash('msg', 'Post created');
         return redirect()->route('home');
 
     }
