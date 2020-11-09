@@ -3,6 +3,11 @@
 
 @section('content')
     <div class="container">
+        @if (session('msg'))
+            <div class="alert alert-success">
+                {{ session('msg') }}
+            </div>
+        @endif
 {{--        show errors--}}
         @if(count($errors)>0)
             @foreach($errors->all() as $error)

@@ -19,6 +19,8 @@ class CreatePostsTable extends Migration
             $table->longText('content');
             $table->unsignedBigInteger('category_id');
             $table->string('photo');
+//            soft deletes
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -57,6 +57,9 @@ class PostsController extends Controller
 
         ]);
 
+        $request->session()->flash('msg', 'Category created');
+        return redirect()->route('home');
+
     }
 
     /**
