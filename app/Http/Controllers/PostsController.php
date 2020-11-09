@@ -15,6 +15,8 @@ class PostsController extends Controller
     public function index()
     {
         //
+        $posts=Post::all();
+        return view('posts.index',compact('posts'));
     }
 
     /**
@@ -53,7 +55,7 @@ class PostsController extends Controller
             "title"=>request('title'),
             "content"=>request('content'),
             'category_id'=>request('category_id'),
-            "photo"=>"uploads/posts".$photo_new_name,
+            "photo"=>"uploads/posts/".$photo_new_name,
             'slug'=>str_slug($request->title),
 
 //            when we need use slug use helpers
@@ -62,7 +64,7 @@ class PostsController extends Controller
         ]);
 
         $request->session()->flash('msg', 'Post created');
-        return redirect()->route('home');
+        return redirect()->route('posts.index');
 
     }
 

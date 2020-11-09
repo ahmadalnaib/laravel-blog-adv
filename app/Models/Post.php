@@ -22,6 +22,14 @@ class Post extends Model
         'category_id',
         'slug',
     ];
+
+//for show photos
+    public  function getPhotoAttribute($photo)
+    {
+      return asset($photo);
+    }
+
+
     public function category()
     {
         return $this->belongsTo(Category::class);

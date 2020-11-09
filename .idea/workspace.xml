@@ -20,14 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26c0e2a-b005-4b47-b4cc-90b3956208b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1604934889build.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1604934999build.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1604935014build.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1604935193build.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/my.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1604937742ck3uwg3a8731988744oecrjxu-weloveopensource-bg-800-2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1604937943ck3uwvv67mydydr74ea00ip4j-bg-stripes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1604937957build.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1604938267hybrid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/posts/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_06_095116_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_06_095116_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +152,7 @@
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
     </include_path>
   </component>
   <component name="ProjectId" id="1juRlvfM1cUOKbZjvjqJqPo0sXl" />
@@ -196,7 +200,7 @@
       <updated>1604652160314</updated>
       <workItem from="1604652168041" duration="9798000" />
       <workItem from="1604768143853" duration="11356000" />
-      <workItem from="1604929606189" duration="5165000" />
+      <workItem from="1604929606189" duration="8124000" />
     </task>
     <servers />
   </component>
@@ -243,10 +247,10 @@
       <screen x="1920" y="148" width="1366" height="768" />
     </state>
     <state width="1323" height="185" key="GridCell.Tab.0.right/1920.148.1366.768/0.0.1280.720@1920.148.1366.768" timestamp="1604675077633" />
-    <state x="2437" y="451" key="NewPhpFileDialog" timestamp="1604777795758">
+    <state x="2437" y="451" key="NewPhpFileDialog" timestamp="1604936328768">
       <screen x="1920" y="148" width="1366" height="768" />
     </state>
-    <state x="2437" y="451" key="NewPhpFileDialog/1920.148.1366.768/0.0.1280.720@1920.148.1366.768" timestamp="1604777795758" />
+    <state x="2437" y="451" key="NewPhpFileDialog/1920.148.1366.768/0.0.1280.720@1920.148.1366.768" timestamp="1604936328768" />
     <state x="2104" y="177" key="SettingsEditor" timestamp="1604658873236">
       <screen x="1920" y="148" width="1366" height="768" />
     </state>

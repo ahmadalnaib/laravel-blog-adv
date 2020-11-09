@@ -29,6 +29,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
 //    posts
+    Route::get('/posts',[PostsController::class,'index'])->name('posts.index');
     Route::get('/post/create',[PostsController::class,'create'])->name('posts.create');
     Route::post('/post/store',[PostsController::class,'store'])->name('posts.store');
 
