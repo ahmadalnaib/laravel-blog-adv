@@ -132,4 +132,12 @@ class PostsController extends Controller
         $post->delete();
         return redirect()->back()->with('msg','Category deleted');
     }
+
+
+    public function trashed()
+    {
+        //
+        $posts=Post::onlyTrashed()->get();
+        return view('posts.trashed',compact('posts'));
+    }
 }

@@ -71,6 +71,9 @@
                                     <a class="dropdown-item" href="{{ route('category.index') }}">
                                         {{ __(' Categories') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('posts.trashed') }}">
+                                        {{ __(' Trashed Posts') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
