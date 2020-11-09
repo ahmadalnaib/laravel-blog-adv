@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Post;
 class PostsController extends Controller
@@ -24,7 +25,8 @@ class PostsController extends Controller
     public function create()
     {
         //
-        return view('posts.create');
+        $categorises=Category::all();
+        return view('posts.create',compact('categorises'));
     }
 
     /**
@@ -39,6 +41,7 @@ class PostsController extends Controller
         $request->validate([
             "title"=>'required',
             "content"=>'required',
+            'category_id'=>'required',
             "photo"=>"required|image"
         ]);
 

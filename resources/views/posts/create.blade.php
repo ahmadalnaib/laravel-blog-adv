@@ -20,6 +20,15 @@
                 <label for="content">Content</label>
                 <textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
             </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control" id="category" name="category_id">
+
+                    @foreach($categorises as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
+                </select>
+            </div>
 
                 <div class="form-group">
                     <label for="photo">Upload photo</label>

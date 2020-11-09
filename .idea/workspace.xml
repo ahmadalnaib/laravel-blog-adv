@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26c0e2a-b005-4b47-b4cc-90b3956208b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/category/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +185,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604652160314</updated>
       <workItem from="1604652168041" duration="9798000" />
-      <workItem from="1604768143853" duration="10649000" />
+      <workItem from="1604768143853" duration="11356000" />
+      <workItem from="1604929606189" duration="1291000" />
     </task>
     <servers />
   </component>
@@ -205,6 +203,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -214,6 +213,10 @@
       <screen x="1920" y="148" width="1366" height="768" />
     </state>
     <state x="2413" y="409" key="#Composer/1920.148.1366.768/0.0.1280.720@1920.148.1366.768" timestamp="1604653634562" />
+    <state x="2333" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604930514432">
+      <screen x="1920" y="148" width="1366" height="768" />
+    </state>
+    <state x="2333" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.148.1366.768/0.0.1280.720@1920.148.1366.768" timestamp="1604930514432" />
     <state width="1323" height="185" key="GridCell.Tab.0.bottom" timestamp="1604675077634">
       <screen x="1920" y="148" width="1366" height="768" />
     </state>
