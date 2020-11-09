@@ -140,4 +140,20 @@ class PostsController extends Controller
         $posts=Post::onlyTrashed()->get();
         return view('posts.trashed',compact('posts'));
     }
+
+    public function hdelete($id)
+    {
+        //
+        $post=Post::withTrashed()->where('id',$id)->first();
+        $post->forceDelete();
+        return redirect()->back()->with('msg','Post deleted');
+    }
+
+    public function restore($id)
+    {
+        //
+        $post=Post::withTrashed()->where('id',$id)->first();
+        $post->restore();
+        return redirect()->route('posts.index')->with('msg','Post deleted');
+    }
 }

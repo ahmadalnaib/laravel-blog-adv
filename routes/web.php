@@ -34,8 +34,10 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
     Route::get('/post/edit/{id}',[PostsController::class,'edit'])->name('posts.edit');
     Route::post('/post/store',[PostsController::class,'store'])->name('posts.store');
     Route::get('/post/delete/{id}',[PostsController::class,'destroy'])->name('posts.delete');
+    Route::get('/post/hdelete/{id}',[PostsController::class,'hdelete'])->name('posts.hdelete');
     Route::get('/post/trashed',[PostsController::class,'trashed'])->name('posts.trashed');
     Route::put('/post/update/{id}',[PostsController::class,'update'])->name('posts.update');
+    Route::get('/post/restore/{id}',[PostsController::class,'restore'])->name('posts.restore');
 
 
 //category
