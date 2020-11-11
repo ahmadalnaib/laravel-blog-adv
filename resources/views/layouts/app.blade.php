@@ -71,6 +71,12 @@
                                     <a class="dropdown-item" href="{{ route('category.index') }}">
                                         {{ __(' Categories') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('tags.create') }}">
+                                        {{ __(' Create Tags') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('tags.index') }}">
+                                        {{ __(' Tags') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('posts.trashed') }}">
                                         {{ __(' Trashed Posts') }}
                                     </a>
@@ -93,7 +99,10 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container">
+                @yield('content')
+            </div>
+
         </main>
     </div>
 </body>

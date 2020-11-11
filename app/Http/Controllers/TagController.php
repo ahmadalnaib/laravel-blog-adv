@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Category;
+use App\Models\Tag;
 
-class CategoriesController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,8 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        //
-        $categorises=Category::all();
-        return view('category.index',compact('categorises'));
+        $tags=Tag::all();
+        return  view('tags.index',compact('tags'));
     }
 
     /**
@@ -27,7 +26,7 @@ class CategoriesController extends Controller
     public function create()
     {
         //
-        return  view('category.create');
+        return  view('tags.create');
     }
 
     /**
@@ -38,18 +37,16 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $request->validate([
-           'name'=>'required',
+           'tag'=>'required',
+
         ]);
 
-       Category::create([
-          'name'=>request('name'),
-       ]);
+        Tag::create([
+        'tag'=>request('tag'),
 
-        $request->session()->flash('msg', 'Category created');
-        return redirect()->route('category.index');
-
+        ]);
+        return redirect()->route('tags.index');
     }
 
     /**
@@ -71,14 +68,9 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        //
-        $category=Category::findOrFail($id);
-        return view('category.edit',compact('category'));
-
-
-
+        $tag=Tag::findOrFail($id);
+        return view('tags.edit',compact('tag'));
     }
-
 
     /**
      * Update the specified resource in storage.
@@ -89,17 +81,16 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category=Category::findOrFail($id);
+        $tag=Tag::findOrFail($id);
 
         $request->validate([
-           'name'=>'required',
+            'tag'=>'required',
         ]);
-           $category->update([
-           $category->name= request('name') ,
-            $category->save()
-        ]);
-        $request->session()->flash('msg', 'Task was successful!');
-        return redirect()->route('category.index');
+      $tag->update([
+          $tag->tag=request('tag'),
+           $tag->save(),
+      ]);
+      return redirect()->route('tags.index');
     }
 
     /**
@@ -111,9 +102,8 @@ class CategoriesController extends Controller
     public function destroy($id)
     {
         //
-        $category=Category::findOrFail($id);
-        $category->delete();
-        return redirect()->back()->with('msg','Category deleted');
+        $tag=Tag::findOrFail($id);
+        $tag->destroy($id);
+        return redirect()->back();
     }
-
 }
