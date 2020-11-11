@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="container grid-my">
-
+      @if($posts->count() >0 )
       @foreach($posts as $post)
         <div class="card" style="width: 18rem;">
             <img src="{{$post->photo}}" class="card-img-top" alt="...">
@@ -15,6 +15,10 @@
             </div>
         </div>
         @endforeach
+
+        @else
+          <p>ops no posts..😥</p>
+          @endif
     </div>
 
 

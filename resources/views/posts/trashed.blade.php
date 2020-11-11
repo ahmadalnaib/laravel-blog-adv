@@ -2,9 +2,9 @@
 
 
 @section('content')
-    <h1>delete Posts</h1>
+    <h1 class="text-center">delete Posts</h1>
     <div class="container grid-my">
-
+       @if($posts->count()>0)
         @foreach($posts as $post)
             <div class="card" style="width: 18rem;">
                 <img src="{{$post->photo}}" class="card-img-top" alt="...">
@@ -16,6 +16,11 @@
                 </div>
             </div>
         @endforeach
+
+        @else
+           <p class="text-center bg-primary text-white">No more posts 😋</p>
+           @endif
+
     </div>
 
 
