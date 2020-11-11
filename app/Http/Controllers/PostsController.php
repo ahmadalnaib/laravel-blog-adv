@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Tag;
 class PostsController extends Controller
 {
     /**
@@ -16,7 +17,8 @@ class PostsController extends Controller
     {
         //
         $posts=Post::all();
-        return view('posts.index',compact('posts'));
+        $tags=Tag::all();
+        return view('posts.index',compact('posts'),compact('tags'));
     }
 
     /**
@@ -27,8 +29,20 @@ class PostsController extends Controller
     public function create()
     {
         //
+        $tags=Tag::all();
         $categorises=Category::all();
-        return view('posts.create',compact('categorises'));
+
+        if($categorises->count() ===0)
+        {
+            return redirect()->route('category.create');
+        }
+
+        if($tags->count() ===0)
+        {
+            return redirect()->route('tags.create');
+        }
+
+        return view('posts.create',compact('categorises'),compact('tags'));
     }
 
     /**

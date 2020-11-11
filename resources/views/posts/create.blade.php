@@ -35,6 +35,7 @@
                 </select>
             </div>
 
+
                 <div class="form-group">
                     <label for="photo">Upload photo</label>
                     <input type="file" class="form-control-file" id="photo" name="photo">
