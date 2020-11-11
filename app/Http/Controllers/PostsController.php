@@ -87,8 +87,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
+        $categorises=Category::all();
         $post=Post::findOrFail($id);
-        return view('posts.edit',compact('post'));
+        return view('posts.edit',compact('post'),compact('categorises'));
     }
 
     /**
@@ -106,13 +107,20 @@ class PostsController extends Controller
             "title"=>'required',
             "content"=>'required',
             'category_id'=>'required',
-            "photo"=>"required|image"
+
         ]);
+        if($request->hasFile('photo')){
+            $photo=request('photo');
+            $photo_new_name=time().$photo->getClientOriginalName();
+            $photo->move('uploads/posts/',$photo_new_name);
+
+            $post->photo='uploads/posts/'.$photo_new_name;
+        }
+
         $post->update([
             $post->title= request('title') ,
             $post->content= request('content') ,
-            $post->photo= request('photo') ,
-            $post->title= request('title') ,
+            $post->category_id=>request('category_id'),
             $post->save()
         ]);
         $request->session()->flash('msg', 'Task was successful!');
