@@ -52,7 +52,8 @@ class UsersController extends Controller
         ]);
 
         $profile=Profile::create([
-            'user_id'=>$user->id
+            'user_id'=>$user->id,
+            "avatar"=>'uploads/avatar/user.png'
         ]);
         return redirect()->route('users.index');
     }
@@ -100,5 +101,22 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function admin($id)
+    {
+        $user=User::findOrFail($id);
+        $user->admin=1;
+        $user->save();
+        return redirect()->route('users.index');
+    }
+
+    public function notAdmin($id)
+    {
+        $user=User::findOrFail($id);
+        $user->admin=0;
+        $user->save();
+        return redirect()->route('users.index');
     }
 }

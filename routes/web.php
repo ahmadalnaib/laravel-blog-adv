@@ -70,4 +70,6 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
     Route::get('/user/trashed',[UsersController::class,'trashed'])->name('users.trashed');
     Route::put('/user/update/{id}',[UsersController::class,'update'])->name('users.update');
     Route::get('/user/restore/{id}',[UsersController::class,'restore'])->name('users.restore');
+    Route::get('/user/admin/{id}',[UsersController::class,'admin'])->name('users.admin');
+    Route::get('/user/notadmin/{id}',[UsersController::class,'notAdmin'])->name('users.notadmin');
 });
