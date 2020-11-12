@@ -58,7 +58,8 @@ class PostsController extends Controller
             "title"=>'required',
             "content"=>'required',
             'category_id'=>'required',
-            "photo"=>"required|image"
+            "photo"=>"required|image",
+            "tags"=>"required",
         ]);
 
         $photo=request('photo');
@@ -76,6 +77,10 @@ class PostsController extends Controller
 //        composer require laravel/helpers
 
         ]);
+
+//        for tages
+        //Insert related models when working with many-to-many relations
+        $post->tags()->attach($request->tags);
 
         $request->session()->flash('msg', 'Post created');
         return redirect()->route('posts.index');

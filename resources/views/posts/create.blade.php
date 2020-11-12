@@ -21,6 +21,19 @@
                 <label for="title">Title</label>
                 <input type="text" name="title" class="form-control" id="title" >
             </div>
+
+            <label for="tag">Tags</label>
+            <div class="form-check p-2 ">
+
+                @foreach($tags as $tag)
+
+                    <input class="form-check-input" name="tags[]" type="checkbox" value="{{$tag->id}}" id="tag">
+                    <label class="form-check-label " for="tag">
+                        {{$tag->tag}}
+                    </label><br>
+                @endforeach
+            </div>
+
             <div class="form-group">
                 <label for="content">Content</label>
                 <textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
