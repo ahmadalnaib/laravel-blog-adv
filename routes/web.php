@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,4 +59,15 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
     Route::get('/tag/delete/{id}',[TagController::class,'destroy'])->name('tags.delete');
     Route::put('/tag/update/{id}',[TagController::class,'update'])->name('tags.update');
 
+
+//    users
+    Route::get('/user',[UsersController::class,'index'])->name('users.index');
+    Route::get('/user/create',[UsersController::class,'create'])->name('users.create');
+    Route::get('/user/edit/{id}',[UsersController::class,'edit'])->name('users.edit');
+    Route::post('/user/store',[UsersController::class,'store'])->name('users.store');
+    Route::get('/user/delete/{id}',[UsersController::class,'destroy'])->name('users.delete');
+    Route::get('/user/hdelete/{id}',[UsersController::class,'hdelete'])->name('users.hdelete');
+    Route::get('/user/trashed',[UsersController::class,'trashed'])->name('users.trashed');
+    Route::put('/user/update/{id}',[UsersController::class,'update'])->name('users.update');
+    Route::get('/user/restore/{id}',[UsersController::class,'restore'])->name('users.restore');
 });
