@@ -79,6 +79,7 @@ class PostsController extends Controller
         ]);
 
 //        for tages
+        //The attach function only adds records to the Pivot table.
         //Insert related models when working with many-to-many relations
         $post->tags()->attach($request->tags);
 
@@ -106,9 +107,11 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
+        $tags=Tag::all();
         $categorises=Category::all();
         $post=Post::findOrFail($id);
-        return view('posts.edit',compact('post'),compact('categorises'));
+
+        return view('posts.edit', compact('post'), compact('categorises'))->with('tags',$tags);
     }
 
     /**
@@ -142,6 +145,9 @@ class PostsController extends Controller
             $post->category_id=>request('category_id'),
             $post->save()
         ]);
+         //The sync function replaces the current records with the new records. This is very useful for updating a model.
+        $post->tags()->sync($request->tags);
+
         $request->session()->flash('msg', 'Task was successful!');
         return redirect()->route('posts.index');
     }

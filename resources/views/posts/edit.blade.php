@@ -22,6 +22,25 @@
                 <label for="title">Title</label>
                 <input type="text" name="title" class="form-control" id="title"  value="{{$post->title}}">
             </div>
+
+            <label for="tag">Tags</label>
+            <div class="form-check p-2 ">
+
+                @foreach($tags as $tag)
+                    <label class="form-check-label " for="tag">
+                    <input class="form-check-input" name="tags[]" type="checkbox" value="{{$tag->id}}" id="tag"
+
+
+                        @foreach($post->tags as $ta)
+                        @if($tag->id == $ta->id)
+                            checked
+                            @endif
+                        @endforeach>
+                        {{$tag->tag}}
+                    </label><br>
+                @endforeach
+            </div>
+
             <div class="form-group">
                 <label for="content">Content</label>
                 <textarea class="form-control" name="content" id="content" cols="30" rows="10">
@@ -33,7 +52,11 @@
                 <select class="form-control" id="category" name="category_id">
 
                     @foreach($categorises as $category)
-                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        @if($category->id == $post->category_id)
+                        <option value="{{$category->id}}" selected>{{$category->name}}</option>
+                        @else
+                            <option value="{{$category->id}}" >{{$category->name}}</option>
+                        @endif
                     @endforeach
                 </select>
             </div>
