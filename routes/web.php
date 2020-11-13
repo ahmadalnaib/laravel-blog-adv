@@ -76,5 +76,5 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
 
 //settings
     Route::get('/settings',[SettingsController::class,'index'])->name('settings.index');
-    Route::put('/settings/update',[SettingsController::class,'update'])->name('settings.update');
+    Route::post('/settings/update',[SettingsController::class,'update'])->name('settings.update');
 });

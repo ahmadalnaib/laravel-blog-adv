@@ -68,9 +68,25 @@ class SettingsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-   $settings=Setting::first();
+        $settings=Setting::first();
+
+        $request->validate([
+            "blog_name"=>'required',
+            "phone"=>'required',
+            'blog_email'=>'required',
+            'address'=>'required',
+        ]);
+
+        $settings->update([
+            $settings->blog_name= request('blog_name') ,
+            $settings->phone= request('phone') ,
+            $settings->blog_email=>request('blog_email'),
+            $settings->address=>request('address'),
+            $settings->save()
+        ]);
+  return  redirect()->back();
 
     }
 
