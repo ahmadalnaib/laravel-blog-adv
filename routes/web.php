@@ -5,6 +5,7 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\SettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,4 +73,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
     Route::get('/user/restore/{id}',[UsersController::class,'restore'])->name('users.restore');
     Route::get('/user/admin/{id}',[UsersController::class,'admin'])->name('users.admin');
     Route::get('/user/notadmin/{id}',[UsersController::class,'notAdmin'])->name('users.notadmin');
+
+//settings
+    Route::get('/settings',[SettingsController::class,'index'])->name('settings.index');
+    Route::put('/settings/update/{id}',[SettingsController::class,'update'])->name('settings.update');
 });

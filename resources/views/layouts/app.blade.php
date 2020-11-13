@@ -83,6 +83,9 @@
                                     <a class="dropdown-item" href="{{ route('users.create') }}">
                                         {{ __(' Create User') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('settings.index') }}">
+                                        {{ __(' Settings') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('posts.trashed') }}">
                                         {{ __(' Trashed Posts') }}
                                     </a>
