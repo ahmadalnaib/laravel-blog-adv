@@ -2,3 +2,38 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
+
+
+main .showcase {
+    background: #1b4b72 center center/cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+
+
+}
+.category {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding: 1rem;
+
+}
+
+li{
+    list-style: none;
+}
+
+ .category li a {
+
+    text-decoration: none;
+     color: #1b4b72;
+     font-size: 1.5rem;
+}

@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,9 @@ use App\Http\Controllers\SettingsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
@@ -78,3 +79,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
     Route::get('/settings',[SettingsController::class,'index'])->name('settings.index');
     Route::post('/settings/update',[SettingsController::class,'update'])->name('settings.update');
 });
+
+
+//front for user
+Route::get('/',[FrontController::class,'index'])->name('index');

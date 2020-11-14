@@ -143,10 +143,12 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            <div class="container">
+        <main >
+
+
                 @yield('content')
-            </div>
+
+
 
         </main>
     </div>

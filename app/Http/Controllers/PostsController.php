@@ -8,6 +8,8 @@ use App\Models\Post;
 use App\Models\Tag;
 class PostsController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
