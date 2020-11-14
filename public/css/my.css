@@ -3,6 +3,18 @@
     grid-template-columns: repeat(3,1fr);
 }
 
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1a202c;
+    text-align: center;
+    padding: 0 4rem;
+    margin: 0 auto;
+}
+
 
 main .showcase {
     background: #1b4b72 center center/cover;
@@ -22,8 +34,9 @@ main .showcase {
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-bottom: 1px solid #333;
+    height: 40vh;
     padding: 1rem;
+    margin-bottom: 2rem;
 
 }
 
@@ -37,3 +50,7 @@ li{
      color: #1b4b72;
      font-size: 1.5rem;
 }
+
+ .category li a:hover {
+     text-decoration: underline;
+ }

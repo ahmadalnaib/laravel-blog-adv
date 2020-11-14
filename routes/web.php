@@ -37,6 +37,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
     Route::get('/post/create',[PostsController::class,'create'])->name('posts.create');
     Route::get('/post/edit/{id}',[PostsController::class,'edit'])->name('posts.edit');
     Route::post('/post/store',[PostsController::class,'store'])->name('posts.store');
+
     Route::get('/post/delete/{id}',[PostsController::class,'destroy'])->name('posts.delete');
     Route::get('/post/hdelete/{id}',[PostsController::class,'hdelete'])->name('posts.hdelete');
     Route::get('/post/trashed',[PostsController::class,'trashed'])->name('posts.trashed');
@@ -83,3 +84,4 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
 
 //front for user
 Route::get('/',[FrontController::class,'index'])->name('index');
+Route::get('/{slug}',[FrontController::class,'show'])->name('posts.show');

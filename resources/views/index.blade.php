@@ -14,13 +14,17 @@
 
     </section>
 
-   <div class="container p-3 m-3">
+   <div class="">
     <div class="blogs">
         @foreach($posts as $post)
             <div class="card" style="width: 18rem;">
                 <img src="{{$post->photo}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{$post->title}}</h5>
+
+                        <li><a href="#">{{$categoy->name}}</a></li>
+                    <a class="btn btn-primary btn-lg" href="{{route('posts.show',$post->slug)}}" role="button">Learn more</a>
+
                     <p class="card-text"><small class="text-muted">{{$post->created_at->diffForHumans()}}</small></p>
 
                 </div>
@@ -31,3 +35,4 @@
    </div>
 
 @endsection
+
