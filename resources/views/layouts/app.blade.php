@@ -41,6 +41,9 @@
                             <a class="dropdown-item"href="{{route('posts.create')}}">
                             {{__('CreatePost')}}
                             </a>
+                            <a class="dropdown-item"href="{{route('home')}}">
+                                {{__('Dashbored')}}
+                            </a>
                             <a class="dropdown-item"href="{{route('posts.index')}}">
                             {{__('ShowPosts')}}
                             </a>

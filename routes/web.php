@@ -25,7 +25,7 @@ use App\Http\Controllers\FrontController;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 //-*/*//*/*/*/*/*/*/*/*/*/*//*/***/*/*//////////////////**/*/*//*///////
 //out route
@@ -79,9 +79,15 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
 //settings
     Route::get('/settings',[SettingsController::class,'index'])->name('settings.index');
     Route::post('/settings/update',[SettingsController::class,'update'])->name('settings.update');
+
+//    home
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
 
 
 //front for user
 Route::get('/',[FrontController::class,'index'])->name('index');
 Route::get('/{slug}',[FrontController::class,'show'])->name('posts.show');
+
+
+

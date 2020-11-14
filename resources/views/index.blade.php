@@ -14,6 +14,8 @@
 
     </section>
 
+
+
    <div class="">
     <div class="blogs">
         @foreach($posts as $post)

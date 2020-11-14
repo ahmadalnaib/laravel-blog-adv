@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Tag;
 
 class FrontController extends Controller
 {
@@ -26,10 +27,7 @@ class FrontController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
 
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -50,6 +48,8 @@ class FrontController extends Controller
      */
     public function show($slug)
     {
+
+
         $post=Post::where('slug',$slug)->first();
         return  view('posts.show',compact('post'));
     }
@@ -87,4 +87,6 @@ class FrontController extends Controller
     {
         //
     }
+
+
 }
