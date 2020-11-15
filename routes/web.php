@@ -23,7 +23,7 @@ use App\Http\Controllers\FrontController;
 //    return view('welcome');
 //});
 
-Auth::routes();
+Auth::routes(['verify'=>true]);
 
 
 
