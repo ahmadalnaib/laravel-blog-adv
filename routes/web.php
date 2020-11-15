@@ -7,6 +7,9 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\UserssController;
+use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\RolesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,3 +94,8 @@ Route::get('/post/show/{slug}',[FrontController::class,'show'])->name('posts.sho
 
 
 
+Route::group(['middleware'=>['role:administrator']],function (){
+    Route::resource('users', UserssController::class);
+    Route::resource('permission', PermissionController::class);
+    Route::resource('roles', RolesController::class);
+});
