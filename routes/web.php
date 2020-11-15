@@ -87,7 +87,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
 
 //front for user
 Route::get('/',[FrontController::class,'index'])->name('index');
-Route::get('/{slug}',[FrontController::class,'show'])->name('posts.show');
+Route::get('/post/show/{slug}',[FrontController::class,'show'])->name('posts.show');
 
 
 

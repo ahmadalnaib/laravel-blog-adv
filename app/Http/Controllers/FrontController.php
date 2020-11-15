@@ -49,7 +49,6 @@ class FrontController extends Controller
     public function show($slug)
     {
 
-
         $post=Post::where('slug',$slug)->first();
         return  view('posts.show',compact('post'));
     }

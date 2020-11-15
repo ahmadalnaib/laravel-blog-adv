@@ -22,10 +22,8 @@
     <list default="true" id="d26c0e2a-b005-4b47-b4cc-90b3956208b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +202,8 @@
       <workItem from="1605084351565" duration="13328000" />
       <workItem from="1605175981512" duration="13989000" />
       <workItem from="1605261468051" duration="15803000" />
-      <workItem from="1605345231626" duration="16312000" />
+      <workItem from="1605345231626" duration="16520000" />
+      <workItem from="1605433611936" duration="3019000" />
     </task>
     <servers />
   </component>
@@ -259,5 +258,9 @@
       <screen x="1920" y="148" width="1366" height="768" />
     </state>
     <state x="2104" y="177" key="SettingsEditor/1920.148.1366.768/0.0.1280.720@1920.148.1366.768" timestamp="1604658873236" />
+    <state x="2266" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1605435776577">
+      <screen x="1920" y="148" width="1366" height="768" />
+    </state>
+    <state x="2266" y="237" width="672" height="678" key="search.everywhere.popup/1920.148.1366.768/0.0.1280.720@1920.148.1366.768" timestamp="1605435776577" />
   </component>
 </project>
